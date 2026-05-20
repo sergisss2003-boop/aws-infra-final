@@ -173,7 +173,7 @@ resource "aws_db_subnet_group" "main" {
 resource "aws_db_instance" "main" {
   identifier             = "${var.project_name}-db"
   engine                 = "postgres"
-  engine_version         = "15.4"
+  engine_version         = "15"
   instance_class         = var.db_instance_class
   allocated_storage      = 20
   db_name                = var.db_name
@@ -183,6 +183,7 @@ resource "aws_db_instance" "main" {
   vpc_security_group_ids = [aws_security_group.rds.id]
   skip_final_snapshot    = true
   multi_az               = false
+  backup_retention_period = 1
   publicly_accessible    = false
 
   tags = {

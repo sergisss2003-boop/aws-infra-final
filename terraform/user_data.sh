@@ -4,7 +4,7 @@ yum install -y python3 python3-pip git
 
 # Clonar el repositorio
 cd /home/ec2-user
-git clone https://github.com/TU_USUARIO/aws-infra-final.git
+git clone https://github.com/sergisss2003-boop/aws-infra-final.git
 cd aws-infra-final/app
 
 # Instalar dependencias
